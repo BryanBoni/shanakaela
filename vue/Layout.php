@@ -15,10 +15,12 @@ This is the web side made for Shanna Kaela by Bryan Boni
         <script src = "../ressources/javascript/jquery-1.12.3.min.js"></script>
         <!--Bootstrap Js-->
         <script src = "../ressources/javascript/bootstrap.min.js"></script>        
+        
     </head>
     <body id = "body">
+        <a href="#" class="back-to-top hidden-xs">Back to Top</a>
         <div class="container-fluid" id="main">
-            <div id = "header">
+            <div id = "header" class="col-md-10 col-md-offset-1">
                 <nav class="navbar navbar-default" id = "navbar">
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,7 +31,7 @@ This is the web side made for Shanna Kaela by Bryan Boni
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#" style="font-size: 24px;">Accueil</a>
+                            <a class="navbar-brand" href="../controlleur/Accueil.php" style="font-size: 24px;">Accueil</a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,15 +42,22 @@ This is the web side made for Shanna Kaela by Bryan Boni
                             </ul>
 
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="../controlleur/Contact.php">Contacts</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
             </div>
-            <div id = "corps"><?php echo $content ?></div>
-            <div id = "footer"></div>
+
         </div>
+
+        <div  id = "corps" class="container-fluid">
+            <div class="col-sm-10 col-sm-offset-1">
+                <?php echo $content ?>
+            </div>
+        </div>
+        <div id = "footer"></div>
+        <script src="../Model/javascript/backOnTop.js"></script>
     </body>
 </html>
 
